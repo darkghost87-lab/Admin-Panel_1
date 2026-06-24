@@ -1,0 +1,240 @@
+{
+    "recentProducts": [
+        {
+            "id": "1",
+            "name": "cursor 16GB",
+            "category": "Ram",
+            "price": "55000000",
+            "amount": "87"
+        },
+        {
+            "id": "2",
+            "name": "RTX 4060",
+            "category": "GPU",
+            "price": "120000000",
+            "amount": "76"
+        },
+        {
+            "id": "3",
+            "name": "RX 580",
+            "category": "GPU",
+            "price": "45000000",
+            "amount": "97"
+        },
+        {
+            "id": "4",
+            "name": "ASUS PRIME B760 M-K",
+            "category": "MotherBoard",
+            "price": "50000000",
+            "amount": "35"
+        },
+        {
+            "id": "5",
+            "name": "گیم دیاس Gamdias aurua GC1",
+            "category": "case",
+            "price": "15000000",
+            "amount": "100"
+        },
+        {
+            "id": "6",
+            "name": "RTX 2060",
+            "category": "GPU",
+            "price": "56000000",
+            "amount": "20"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Amir",
+            "roll": "Admin",
+            "state": "Active"
+        },
+        {
+            "id": 2,
+            "name": "Setare",
+            "roll": "Normal User",
+            "state": "Not Active"
+        },
+        {
+            "id": 3,
+            "name": "Mohammad",
+            "roll": "Normal User",
+            "state": "Active"
+        },
+        {
+            "id": 4,
+            "name": "Fateme",
+            "roll": "Admin",
+            "state": "Active"
+        },
+        {
+            "id": 5,
+            "name": "Ali",
+            "roll": "employment",
+            "state": "Active"
+        },
+        {
+            "id": 6,
+            "name": "Armin",
+            "roll": "Normal User",
+            "state": "Not Active"
+        },
+        {
+            "id": 7,
+            "name": "Armin",
+            "roll": "Normal User",
+            "state": "Not Active"
+        },
+        {
+            "id": 8,
+            "name": "Arash",
+            "roll": "employment",
+            "state": "Active"
+        },
+        {
+            "id": 9,
+            "name": "Mobina",
+            "roll": "Normal User",
+            "state": "Not Active"
+        },
+        {
+            "id": 10,
+            "name": "Mohsen",
+            "roll": "Admin",
+            "state": "Active"
+        },
+        {
+            "id": 11,
+            "name": "Mohsen",
+            "roll": "vipUser",
+            "state": "Active"
+        }
+    ],
+    "products": [
+        {
+            "id": "1",
+            "name": "cursor 16GB",
+            "category": "Ram",
+            "price": "55000000",
+            "amount": "87"
+        },
+        {
+            "id": "2",
+            "name": "RTX 4060",
+            "category": "GPU",
+            "price": "120000000",
+            "amount": "76"
+        },
+        {
+            "id": "3",
+            "name": "RX 580",
+            "category": "GPU",
+            "price": "45000000",
+            "amount": "97"
+        },
+        {
+            "id": "4",
+            "name": "ASUS PRIME B760 M-K",
+            "category": "MotherBoard",
+            "price": "50000000",
+            "amount": "35"
+        },
+        {
+            "id": "5",
+            "name": "گیم دیاس Gamdias aurua GC1",
+            "category": "case",
+            "price": "15000000",
+            "amount": "100"
+        },
+        {
+            "id": "6",
+            "name": "RTX 2060",
+            "category": "GPU",
+            "price": "56000000",
+            "amount": "20"
+        },
+        {
+            "id": "7",
+            "name": "core i5 14400",
+            "category": "CPU",
+            "price": "65000000",
+            "amount": "50"
+        },
+        {
+            "id": "8",
+            "name": "core i3 55600",
+            "category": "CPU",
+            "price": "10000000",
+            "amount": "50"
+        },
+        {
+            "id": "9",
+            "name": "MSI Spatium M371 M.2 1TB",
+            "category": "SSD",
+            "price": "80000000",
+            "amount": "80"
+        },
+        {
+            "id": "10",
+            "name": "core i7 7600",
+            "category": "CPU",
+            "price": "70000000",
+            "amount": "70"
+        },
+        {
+            "id": "11",
+            "name": "RTX 3060",
+            "category": "GPU",
+            "price": "60000000",
+            "amount": "68"
+        }
+    ],
+    "order": [
+        {
+            "id": "1",
+            "orderId": "#1020",
+            "customer": "Mobina",
+            "Date": "15/03/1404",
+            "quantity": "22,500,000",
+            "state": "در حال انتظار",
+            "pay": "تایید"
+        },
+        {
+            "id": "2",
+            "orderId": "#1294",
+            "customer": "Fateme",
+            "Date": "11/03/1404",
+            "quantity": "45,000,000",
+            "state": "در حال پردازش",
+            "pay": "تایید"
+        },
+        {
+            "id": "3",
+            "orderId": "#1901",
+            "customer": "Mohammad",
+            "Date": "13/03/1404",
+            "quantity": "12,500,000",
+            "state": "تحویل شده",
+            "pay": "تایید"
+        },
+        {
+            "id": "4",
+            "orderId": "#1781",
+            "customer": "Armin",
+            "Date": "15/03/1404",
+            "quantity": "3,800,000",
+            "state": "لغو شده",
+            "pay": "لغو"
+        },
+        {
+            "id": "5",
+            "orderId": "#1501",
+            "customer": "Setare",
+            "Date": "14/03/1404",
+            "quantity": "42,500,000",
+            "state": "تحویل شده",
+            "pay": "تایید"
+        }
+    ]
+}

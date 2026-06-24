@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel</title>
+    <link rel="stylesheet" href="./css/panel.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+</head>
+
+<body>
+    <section class="container-panel">
+        <div class="panel-grid-justify">
+            <aside class="container-sidebar">
+                <nav class="fixed-nav-sidebar">
+                    <div class="sidebar-items-to-page">
+                        <div class="title-sidebar-items-pages">
+                            <div><i class="bi bi-check-circle-fill"></i></div>
+                            <div class="text-info">
+                                <h2>شیراز پیسی</h2>
+                            </div>
+                        </div>
+                        <div class="justify-sidebar-items-page">
+                            <div class="sidebar-items-pages">
+                                <button class="btn-items-page active-btn-items-page" data-id="dashboard">
+                                    <h3 data-id="dashboard">داشبورد</h3>
+                                </button>
+                            </div>
+                            <div class="sidebar-items-pages">
+                                <button class="btn-items-page" data-id="users">
+                                    <h3 data-id="users">کاربران</h3>
+                                </button>
+                            </div>
+                            <div class="sidebar-items-pages">
+                                <button class="btn-items-page" data-id="products">
+                                    <h3 data-id="products">محصولات</h3>
+                                </button>
+                            </div>
+                            <div class="sidebar-items-pages">
+                                <button class="btn-items-page" data-id="orders">
+                                    <h3 data-id="orders">سفارشات</h3>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <section class="main-page active-main-page" id="dashboard">
+                <header class="header">
+                    <ul class="container-header-list-item">
+                        <li class="list-item">
+                            <h2>داشبورد</h2>
+                        </li>
+                        <li class="list-item">
+                            <div><i class="bi bi-journal-text"></i></div>
+                            <div class="logo-user-info">
+                                <div><i class="bi bi-person-circle"></i></div>
+                                <div class="user">
+                                    <h2>Admin</h2>
+                                    <h5>admin8713</h5>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="container-sales-specifications">
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-person-fill-check"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">45</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>کل مشتریان</h4>
+                            <h4>ثبت نام شده</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-currency-dollar"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">50</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>فروش امروز</h4>
+                            <h4 class="currency">میلیون تومان</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-currency-dollar"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">255</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>سود کل</h4>
+                            <h4 class="currency">میلیون تومان</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-exclamation-octagon"></i></div>
+                        <div class="sales-item">
+                            <h2 id="product-number" class="sales-number">18</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>کالاهای در خطر اتمام</h4>
+                            <h4 class="currency">تعداد سفارشات</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-state-chart">
+                    <div class="sales-state-chart">
+                        <canvas id="donatChart"></canvas>
+                    </div>
+                    <div class="sales-state-chart">
+                        <canvas id="linerChart"></canvas>
+                    </div>
+                </div>
+                <div class="container-list-item-about-aside-sales-earlier">
+                    <div class="sales-earlier">
+                        <div class="sales-earlier-item">
+                            <div><i class="bi bi-bag-check-fill"></i></div>
+                            <h2>فروش های اخیر</h2>
+                        </div>
+                        <div class="filter-item">
+                            <select name="filter-select-products" id="filter-select-recent-products"
+                                class="filter-select">
+                                <option value="all">همه</option>
+                                <option value="GPU">کارت گرافیک</option>
+                                <option value="Ram">رم</option>
+                                <option value="MotherBoard">مادربورد</option>
+                                <option value="SSD">ssd</option>
+                                <option value="CPU">پردازنده</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead class="titles-product-info">
+                            <tr>
+                                <th>
+                                    <h3>نام محصول</h3>
+                                </th>
+                                <th>
+                                    <h3>دسته بندی</h3>
+                                </th>
+                                <th>
+                                    <h3>قیمت محصول</h3>
+                                </th>
+                                <th>
+                                    <h3>موجودی انبار</h3>
+                                </th>
+                                <th>
+                                    <h3>ویرایش</h3>
+                                </th>
+                                <th>
+                                    <h3>حذف</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="container-item-recent-products">
+                            <!-- read data form product json with javascript -->
+                            <!-- <tr>
+                                <td class="item-product">
+                                    <div class="name-product">
+                                        <h4>cursor 16 GB</h4>
+                                    </div>
+                                    <div class="category-product">
+                                        <h4>Ram</h4>
+                                    </div>
+                                    <div class="price-product">
+                                        <h4>55000000</h4>
+                                    </div>
+                                    <div class="amount"><span>87</span></div>
+                                    <div class="dev-del-btn"><button class="del-btn" id="del-btn"><i
+                                                class="bi bi-x-circle"></i></button></div>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="main-page" id="users">
+                <header class="header">
+                    <ul class="container-header-list-item">
+                        <li class="list-item">
+                            <h2>کاربران ثبت نامی</h2>
+                        </li>
+                        <li class="list-item">
+                            <div><i class="bi bi-journal-text"></i></div>
+                            <div class="logo-user-info">
+                                <div><i class="bi bi-person-circle"></i></div>
+                                <div class="user">
+                                    <h2>Admin</h2>
+                                    <h5>admin8713</h5>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="container-sales-specifications">
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-person-fill-check"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">145</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>کل کاربران</h4>
+                            <h4>ثبت نام شده</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-check-circle-fill"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">120</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>کاربران فعال</h4>
+                            <h4 class="currency">نفر</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-dash-circle"></i></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">25</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>کاربران غیر فعال</h4>
+                            <h4 class="currency">میلیون تومان</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-state-chart">
+                    <div class="sales-state-chart">
+                        <canvas id="lineChartUsers"></canvas>
+                    </div>
+                    <div class="sales-state-chart">
+                        <canvas id="doughnutChartUsers"></canvas>
+                    </div>
+                </div>
+                <div class="container-list-item-about-aside-sales-earlier">
+                    <div class="sales-earlier">
+                        <div class="sales-earlier-item">
+                            <div><i class="bi bi-person-badge"></i></div>
+                            <h2>کاربران</h2>
+                        </div>
+                        <div class="filter-item">
+                            <select name="filter-select-users" id="filter-role" class="filter-select">
+                                <option value="all">همه</option>
+                                <option value="Admin">Admin</option>
+                                <option value="employment">کارمندان</option>
+                                <option value="Normal User">کاربران عادی</option>
+                                <option value="vipUser">vipUser</option>
+                            </select>
+                        </div>
+                        <div class="search-item">
+                            <div class="search-sec">
+                                <div><i class="bi bi-search"></i></div>
+                                <input type="text" placeholder="نام" id="search-users" class="search-input"
+                                    name="search-input">
+                            </div>
+                        </div>
+                        <div class="filter-item">
+                            <select id="filter-status" class="filter-select">
+                                <option value="all">همه وضعیت‌ها</option>
+                                <option value="Active">فعال</option>
+                                <option value="Not Active">غیرفعال</option>
+                            </select>
+                        </div>
+                        <div class="add-new-modal">
+                            <div><i class="bi bi-plus-circle-fill"></i></div>
+                            <button id="add-user" class="add-user">اضافه کردن</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead class="titles-user-info">
+                            <tr>
+                                <th>
+                                    <h3>ردیف</h3>
+                                </th>
+                                <th>
+                                    <h3>نام کاربر</h3>
+                                </th>
+                                <th>
+                                    <h3>نقش کاربر</h3>
+                                </th>
+                                <th>
+                                    <h3>وضعیت</h3>
+                                </th>
+                                <th>
+                                    <h3>ویرایش</h3>
+                                </th>
+                                <th>
+                                    <h3>حذف</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="container-item-users">
+                            <!-- must be read data form product json with javascript -->
+                            <!-- <tr data-role="${item.roll}>
+                                    <td  class="col-id">${item.id}</td>
+                                    <td class="col-name">${item.name}</td>
+                                    <td class="col-role">${item.roll}</td>
+                                    <td class="col-state">${item.state}</td>
+                                    <td class="col-actions">
+                                        <button class="edit-btn"><i class="bi bi-pencil-square"></i></button>
+                                        <button class="del-btn"><i class="bi bi-x-circle"></i></button>
+                                    </td>
+                                </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal">
+                    <div class="container-form-modal">
+                        <h2>یک کاربر جدید اضافه کنید.</h2>
+                        <form action="" class="form-modal">
+                            <input type="number" placeholder="ردیف..." id="row-add-user" class="row-add-input">
+                            <input type="text" placeholder="نام..." id="row-add-name" class="row-add-input">
+                            <input type="text" placeholder="نقش..." id="row-add-role" class="row-add-input">
+                            <input type="text" placeholder="وضعیت..." id="row-add-state" class="row-add-input">
+                            <div class="management-btns">
+                                <button id="add-new-u" class="add-new">اضافه کردن</button>
+                            </div>
+                        </form>
+                        <div class="management-btns">
+                            <button class="cancel">انصراف</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-page" id="products">
+                <header class="header">
+                    <ul class="container-header-list-item">
+                        <li class="list-item">
+                            <h2>محصولات</h2>
+                        </li>
+                        <li class="list-item">
+                            <div><i class="bi bi-journal-text"></i></div>
+                            <div class="logo-user-info">
+                                <div><i class="bi bi-person-circle"></i></div>
+                                <div class="user">
+                                    <h2>Admin</h2>
+                                    <h5>admin8713</h5>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="container-sales-specifications">
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-person-fill-check"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">1250</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>کل محصولات</h4>
+                            <h4>طبق سرشماری این هفته</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-bag-check-fill"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">980</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>موجود</h4>
+                            <h4 class="currency">موجودی کل انبار</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-bag-dash-fill"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">85</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>اتمام موجودی</h4>
+                            <h4 class="currency">باید خریداری شود</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-fire"></i></div>
+                        <div class="sales-item">
+                            <h2 id="product-number" class="sales-number">32</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>پرفروش این هفته</h4>
+                            <h4 class="currency">کارت گرافیک</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-state-chart">
+                    <div class="sales-state-chart">
+                        <canvas id="storeChart"></canvas>
+                    </div>
+                    <div class="sales-state-chart">
+                        <canvas id="bestSellerChart"></canvas>
+                    </div>
+                </div>
+                <div class="container-list-item-about-aside-sales-earlier">
+                    <div class="sales-earlier">
+                        <div class="sales-earlier-item">
+                            <div><i class="bi bi-bag-fill"></i></div>
+                            <h2>محصولات</h2>
+                        </div>
+                        <div class="filter-item">
+                            <select name="filter-products" id="filter-all-products" class="filter-select">
+                                <option value="all">همه</option>
+                                <option value="GPU">کارت گرافیک</option>
+                                <option value="Ram">رم</option>
+                                <option value="MotherBoard">مادربورد</option>
+                                <option value="SSD">ssd</option>
+                                <option value="CPU">پردازنده</option>
+                            </select>
+                        </div>
+                        <div class="search-item">
+                            <div class="search-sec">
+                                <div><i class="bi bi-search"></i></div>
+                                <input type="text" placeholder="نام محصول..." id="search-product" class="search-input"
+                                    name="search-input">
+                            </div>
+                        </div>
+                        <div class="add-new-modal">
+                            <div><i class="bi bi-plus-circle-fill"></i></div>
+                            <button id="add-product" class="add-product">اضافه کردن</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead class="titles-product-info">
+                            <tr>
+                                <th>
+                                    <h3>ردیف</h3>
+                                </th>
+                                <th>
+                                    <h3>نام محصول</h3>
+                                </th>
+                                <th>
+                                    <h3>دسته بندی</h3>
+                                </th>
+                                <th>
+                                    <h3>قیمت محصول</h3>
+                                </th>
+                                <th>
+                                    <h3>موجودی انبار</h3>
+                                </th>
+                                <th>
+                                    <h3>ویرایش</h3>
+                                </th>
+                                <th>
+                                    <h3>حذف</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="container-item-products">
+                            <!-- read data form product json with javascript -->
+                            <!-- <tr data-role="${item.roll}>
+                                <td  class="col-id">${item.id}</td>
+                                <td class="col-name">${item.name}</td>
+                                <td class="col-role">${item.roll}</td>
+                                <td class="col-state">${item.state}</td>
+                                <td class="col-actions">
+                                    <button class="edit-btn"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="del-btn"><i class="bi bi-x-circle"></i></button>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal">
+                    <div class="container-form-modal">
+                        <h2>یک کاربر جدید اضافه کنید.</h2>
+                        <form action="" class="form-modal">
+                            <input type="number" placeholder="ردیف..." id="row-add-user" class="row-add-input">
+                            <input type="text" placeholder="نام محصول..." id="row-add-name" class="row-add-input">
+                            <input type="text" placeholder="دسته بندی..." id="row-add-role" class="row-add-input">
+                            <input type="text" placeholder="قیمت..." id="row-add-state" class="row-add-input">
+                            <input type="text" placeholder="موجودی انبار..." id="row-add-amount" class="row-add-input">
+                            <div class="management-btns">
+                                <button id="add-new-p" class="add-new">اضافه کردن</button>
+                            </div>
+                        </form>
+                        <div class="management-btns">
+                            <button class="cancel">انصراف</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-page" id="orders">
+                <header class="header">
+                    <ul class="container-header-list-item">
+                        <li class="list-item">
+                            <h2>سفارشات</h2>
+                        </li>
+                        <li class="list-item">
+                            <div><i class="bi bi-journal-text"></i></div>
+                            <div class="logo-user-info">
+                                <div><i class="bi bi-person-circle"></i></div>
+                                <div class="user">
+                                    <h2>Admin</h2>
+                                    <h5>admin8713</h5>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </header>
+
+                <div class="container-sales-specifications">
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-cart-fill"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">248</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>کل سفارشات</h4>
+                            <h4>امروز</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-cart-plus"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">55</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>در انتظار تایید</h4>
+                            <h4 class="currency">سفارش</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-cart-plus-fill"></i></div>
+                        <div class="sales-item">
+                            <h2 id="users-number" class="sales-number">42</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>در حال پردازش</h4>
+                            <h4 class="currency">سفارش</h4>
+                        </div>
+                    </div>
+                    <div class="sales-specifications-item">
+                        <div class="sales-item"><i class="bi bi-cart-check-fill"></i></div>
+                        <div class="sales-item">
+                            <h2 id="product-number" class="sales-number">151</h2>
+                        </div>
+                        <div class="sales-item">
+                            <h4>تحویل شده</h4>
+                            <h4 class="currency">سفارش</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-state-chart">
+                    <div class="sales-state-chart">
+                        <canvas id="weekOrderNum"></canvas>
+                    </div>
+                    <div class="sales-state-chart">
+                        <canvas id="stateOrder"></canvas>
+                    </div>
+                </div>
+                <div class="container-list-item-about-aside-sales-earlier">
+                    <div class="sales-earlier">
+                        <div class="sales-earlier-item">
+                            <div><i class="bi bi-cart-fill"></i></div>
+                            <h2>سفارشات</h2>
+                        </div>
+                        <div class="filter-item">
+                            <select name="filter-order-state" id="filter-select-order" class="filter-select">
+                                <option value="all">همه</option>
+                                <option value="در حال انتظار">در حال انتظار</option>
+                                <option value="در حال پردازش">در حال پردازش</option>
+                                <option value="تحویل شده">تحویل شده</option>
+                                <option value="لغو شده">لغو شده</option>
+                            </select>
+                        </div>
+                        <div class="search-item">
+                            <div class="search-sec">
+                                <div><i class="bi bi-search"></i></div>
+                                <input type="text" placeholder="نام مشتری..." id="search-customer-order"
+                                    class="search-input" name="search-input">
+                            </div>
+                        </div>
+                        <div class="add-new-modal">
+                            <div><i class="bi bi-plus-circle-fill"></i></div>
+                            <button id="add-order" class="add-order">ثبت سفارش جدید</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead class="titles-orders-info">
+                            <tr>
+                                <th>
+                                    <h3>ردیف</h3>
+                                </th>
+                                <th>
+                                    <h3>کد سفارش</h3>
+                                </th>
+                                <th>
+                                    <h3>مشتری</h3>
+                                </th>
+                                <th>
+                                    <h3>تاریخ</h3>
+                                </th>
+                                <th>
+                                    <h3>مبلغ</h3>
+                                </th>
+                                <th>
+                                    <h3>وضعیت</h3>
+                                </th>
+                                <th>
+                                    <h3>پرداخت</h3>
+                                </th>
+                                <th>
+                                    <h3>ویرایش</h3>
+                                </th>
+                                <th>
+                                    <h3>حذف</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="container-item-orders">
+                            <!-- read data form product json with javascript -->
+                            <!-- <tr>
+                                <td class="item-order">
+                                    <div class="row-orders">
+                                        <h4>.</h4>
+                                    </div>
+                                    <div class="code-order">
+                                        <h4>.</h4>
+                                    </div>
+                                    <div class="customer-name-oreder">
+                                        <h4>.</h4>
+                                    </div>
+                                    <div class="date-oreder">
+                                        <h4>.</h4>
+                                    </div>
+                                    <div class="quantity-oreder">
+                                        <h4>.</h4>
+                                    </div>
+                                    <div class="state-oreder">
+                                        <h4>.</h4>
+                                    </div>
+                                    <div class="price-oreder">
+                                        <h4>.</h4>
+                                    </div>
+                                    <div class="dev-edit-btn"><button class="edit-btn">
+                                            <i class="bi bi-pencil-square"></i></button>
+                                    </div>
+                                    <div class="dev-del-btn"><button class="del-btn" id="del-btn"><i
+                                                class="bi bi-x-circle"></i></button></div>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal">
+                    <div class="container-form-modal">
+                        <h2>یک کاربر جدید اضافه کنید.</h2>
+                        <form action="" class="form-modal">
+                            <input type="number" placeholder="ردیف..." id="row-add-user" class="row-add-input">
+                            <input type="text" placeholder="نام محصول..." id="row-add-name" class="row-add-input">
+                            <input type="text" placeholder="دسته بندی..." id="row-add-role" class="row-add-input">
+                            <input type="text" placeholder="قیمت..." id="row-add-state" class="row-add-input">
+                            <input type="text" placeholder="موجودی انبار..." id="row-add-amount" class="row-add-input">
+                            <div class="management-btns">
+                                <button id="add-new-o" class="add-new">اضافه کردن</button>
+                            </div>
+                        </form>
+                        <div class="management-btns">
+                            <button class="cancel">انصراف</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/chart.js"></script>
+</body>
+
+</html>

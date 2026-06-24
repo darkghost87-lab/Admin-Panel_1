@@ -1,0 +1,354 @@
+@media (max-width:1200px) {
+    .input-element-justify {
+        width: 100%;
+        height: 2rem;
+    }
+
+    .login-item {
+        width: 80%;
+    }
+}
+
+@media (max-width:992px) {
+    .login-item {
+        width: 90%;
+    }
+
+    .login-item input {
+        width: 85%;
+    }
+}
+
+@media (max-width:768px) {
+    .container-justify-content-login {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .info-bg-next-to-login-form {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .input-element-justify {
+        width: 100%;
+        height: 2.2rem;
+    }
+
+    .login-item input {
+        width: 90%;
+    }
+}
+
+@media (max-width:579px) {
+    .login-item input {
+        width: 87%;
+    }
+}
+
+/* Panel */
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+    .panel-grid-justify {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .container-sidebar {
+        width: 15vw;
+    }
+
+    .fixed-nav-sidebar {
+        height: 35rem;
+    }
+
+    .main-page {
+        width: 82%;
+        height: 100%;
+    }
+
+    .container-item-recent-products {
+        width: 87%;
+    }
+
+    .container-item-recent-products tr {
+        width: 100%;
+    }
+
+    .titles-product-info tr {
+        width: 120%;
+        gap: 0;
+    }
+
+    .container-item-products {
+        width: 87%;
+    }
+
+    .container-item-products tr {
+        width: 100%;
+    }
+
+    .container-item-users {
+        width: 87%;
+    }
+
+    .container-item-users tr {
+        width: 100%;
+    }
+
+    .container-list-item-about-aside-sales-earlier {
+        width: 95%;
+    }
+
+    .titles-user-info tr {
+        width: 92%;
+    }
+
+    .container-item-orders {
+        width: 90%;
+    }
+
+    .container-item-orders tr {
+        width: 100%;
+    }
+
+    .titles-orders-info tr {
+        width: 85%;
+    }
+
+    .sales-specifications-item {
+        width: 150px;
+    }
+
+    .sales-earlier {
+        width: 95%;
+    }
+
+    .container-header-list-item {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .panel-grid-justify {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .container-sidebar {
+        width: 20vw;
+    }
+
+    .fixed-nav-sidebar {
+        width: 20vw;
+        height: 28rem;
+    }
+
+    .main-page {
+        width: 82%;
+        height: 100%;
+    }
+
+    .container-item-recent-products {
+        width: 87%;
+    }
+
+    .container-item-recent-products tr {
+        width: 100%;
+    }
+
+    .titles-product-info tr {
+        width: 120%;
+        gap: 0;
+    }
+
+    .container-item-products {
+        width: 95%;
+    }
+
+    .container-item-products tr {
+        width: 100%;
+    }
+
+    .container-item-users {
+        width: 87%;
+    }
+
+    .container-item-users tr {
+        width: 100%;
+    }
+
+    .container-list-item-about-aside-sales-earlier {
+        width: 90%;
+    }
+
+    .titles-user-info tr {
+        width: 92%;
+    }
+
+    .container-item-orders {
+        width: 90%;
+    }
+
+    .container-item-orders tr {
+        width: 95%;
+    }
+
+    .titles-orders-info tr {
+        width: 80%;
+    }
+
+    .sales-specifications-item {
+        width: 140px;
+    }
+
+    .sales-earlier {
+        width: 95%;
+    }
+
+    .container-header-list-item {
+        width: 95%;
+    }
+
+    .search-item {
+        width: 150px;
+    }
+
+    .filter-select {
+        width: 85%;
+    }
+
+    .add-new-user {
+        width: 140px;
+    }
+
+    .add-new-product {
+        width: 140px;
+        gap: 5px;
+    }
+
+    .container-item-orders td {
+        width: 85px;
+    }
+
+    .titles-product-info h3 {
+        width: 100px;
+    }
+
+    .add-new-order {
+        width: 150px;
+    }
+
+    .list-item:nth-of-type(2) {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .title-sidebar-items-pages {
+        width: 85%;
+    }
+
+    .fixed-nav-sidebar {
+        width: 20vw;
+        height: 25rem;
+        position: fixed;
+        top: 10px;
+        right: 1px;
+    }
+
+    .sidebar-items-pages {
+        width: 80%;
+        height: 2.2rem;
+    }
+
+    .list-item:nth-of-type(2) {
+        width: 150px;
+    }
+
+    .justify-sidebar-items-page {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .panel-grid-justify {
+        display: flex;
+        flex-direction: row;
+        gap: 1px;
+    }
+
+    .container-sales-specifications {
+        width: 55%;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .sales-specifications-item {
+        width: 150px;
+    }
+
+    .container-item-recent-products {
+        width: 35rem;
+    }
+
+    .container-state-chart {
+        width: 90%;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titles-product-info {
+        display: flex;
+    }
+
+    .titles-product-info h3 {
+        width: 60px;
+    }
+
+    .container-item-users {
+        width: 35rem;
+    }
+
+    .container-item-products {
+        width: 35rem;
+    }
+
+    .add-new-product {
+        width: 100px;
+        gap: 1px;
+    }
+
+    .search-item{
+        width: 150px;
+    }
+
+    .container-list-item-about-aside-sales-earlier {
+        width: 90%;
+    }
+
+    .container-item-orders{
+        width: 30rem;
+    }
+
+    .container-item-orders tr{
+        width: 100%;
+    }
+
+    .titles-orders-info tr{
+        width: 30rem;
+    }
+
+    .add-new-order{
+        width: 150px;
+        gap: 1px;
+    }
+
+    .add-new-user{
+        width: 150px;
+        gap: 1px;
+    }
+}

@@ -10,7 +10,7 @@
 
 پروژه به صورت زنده روی GitHub Pages در دسترس است:
 
-👉 [مشاهده ادمین پنل admin panel](https://darkghost87-lab.github.io/GameInfo/)
+👉 [مشاهده ادمین پنل admin panel]( https://darkghost87-lab.github.io/Admin-Panel_1/)
 
 
 ## ✨ ویژگی‌ها

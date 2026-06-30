@@ -65,57 +65,25 @@
     }
 
     .main-page {
-        width: 82%;
+        width: 95%;
         height: 100%;
     }
 
-    .container-item-recent-products {
+    .contianer-rows-item-issue {
         width: 87%;
     }
 
-    .container-item-recent-products tr {
+    .contianer-rows-item-issue tr {
         width: 100%;
     }
 
-    .titles-product-info tr {
-        width: 120%;
+    .titles-attrbute-item tr {
+        width: 100%;
         gap: 0;
-    }
-
-    .container-item-products {
-        width: 87%;
-    }
-
-    .container-item-products tr {
-        width: 100%;
-    }
-
-    .container-item-users {
-        width: 87%;
-    }
-
-    .container-item-users tr {
-        width: 100%;
     }
 
     .container-list-item-about-aside-sales-earlier {
         width: 95%;
-    }
-
-    .titles-user-info tr {
-        width: 92%;
-    }
-
-    .container-item-orders {
-        width: 90%;
-    }
-
-    .container-item-orders tr {
-        width: 100%;
-    }
-
-    .titles-orders-info tr {
-        width: 85%;
     }
 
     .sales-specifications-item {
@@ -148,57 +116,29 @@
     }
 
     .main-page {
-        width: 82%;
+        width: 95%;
         height: 100%;
     }
 
-    .container-item-recent-products {
-        width: 87%;
-    }
-
-    .container-item-recent-products tr {
-        width: 100%;
-    }
-
-    .titles-product-info tr {
-        width: 120%;
-        gap: 0;
-    }
-
-    .container-item-products {
+    .contianer-rows-item-issue {
         width: 95%;
     }
 
-    .container-item-products tr {
+    .contianer-rows-item-issue tr {
         width: 100%;
     }
 
-    .container-item-users {
-        width: 87%;
+    .titles-attrbute-item {
+        width: 95%;
     }
 
-    .container-item-users tr {
+    .titles-attrbute-item tr {
         width: 100%;
+        gap: 0;
     }
 
     .container-list-item-about-aside-sales-earlier {
         width: 90%;
-    }
-
-    .titles-user-info tr {
-        width: 92%;
-    }
-
-    .container-item-orders {
-        width: 90%;
-    }
-
-    .container-item-orders tr {
-        width: 95%;
-    }
-
-    .titles-orders-info tr {
-        width: 80%;
     }
 
     .sales-specifications-item {
@@ -210,7 +150,7 @@
     }
 
     .container-header-list-item {
-        width: 95%;
+        width: 100%;
     }
 
     .search-item {
@@ -221,29 +161,58 @@
         width: 85%;
     }
 
-    .add-new-user {
+    .add-new-modal {
         width: 140px;
     }
 
-    .add-new-product {
-        width: 140px;
-        gap: 5px;
+    .titles-attrbute-item h3 {
+        width: 80px;
     }
 
-    .container-item-orders td {
-        width: 85px;
-    }
-
-    .titles-product-info h3 {
+    .contianer-rows-item-issue td {
         width: 100px;
-    }
-
-    .add-new-order {
-        width: 150px;
     }
 
     .list-item:nth-of-type(2) {
         width: 200px;
+    }
+
+    /* ==== menu in mobile width ====*/
+    .container-sidebar {
+        display: flex;
+        width: 1vw;
+        height: auto;
+    }
+
+    .mobile-open-menu {
+        display: flex;
+        width: 3rem;
+        height: 100%;
+    }
+
+    .mobile-open-menu button {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        cursor: pointer;
+        border: 1px solid #3fa0a7;
+        border-radius: 5px;
+    }
+
+    .mobile-open-menu i {
+        color: #3fa0a7;
+        font-size: 20px;
+    }
+
+    .fixed-nav-sidebar {
+        width: 15rem;
+        transform: translateX(15rem);
+        z-index: 999;
+        top: 8%;
+    }
+
+    .active-fixed-nav-sidebar {
+        transform: translateX(-7.5rem);
     }
 }
 
@@ -290,65 +259,246 @@
         width: 150px;
     }
 
-    .container-item-recent-products {
-        width: 35rem;
+    .contianer-rows-item-issue {
+        width: 95%;
     }
 
     .container-state-chart {
-        width: 90%;
+        width: 100%;
         height: 50rem;
         display: flex;
         flex-direction: column;
     }
 
-    .titles-product-info {
+    .titles-attrbute-item {
+        width: 95%;
+    }
+
+    .titles-attrbute-item {
         display: flex;
     }
 
-    .titles-product-info h3 {
-        width: 60px;
-    }
-
-    .container-item-users {
-        width: 35rem;
-    }
-
-    .container-item-products {
-        width: 35rem;
-    }
-
-    .add-new-product {
+    .add-new-modal {
         width: 100px;
         gap: 1px;
     }
 
-    .search-item{
+    .search-item {
         width: 150px;
     }
 
     .container-list-item-about-aside-sales-earlier {
-        width: 90%;
-    }
-
-    .container-item-orders{
-        width: 30rem;
-    }
-
-    .container-item-orders tr{
         width: 100%;
     }
 
-    .titles-orders-info tr{
-        width: 30rem;
+    .titles-attrbute-item h3 {
+        width: 40px;
     }
 
-    .add-new-order{
+    .contianer-rows-item-issue td {
+        width: 50px;
+        font-size: 9px;
+    }
+
+    .titles-attrbute-item tr {
+        width: 100%;
+        gap: 0;
+    }
+
+    /* ==== menu in mobile width ====*/
+    .container-header-list-item {
+        width: 95%;
+    }
+
+    .container-sidebar {
+        display: flex;
+        width: 1vw;
+        height: auto;
+    }
+
+    .mobile-open-menu {
+        display: flex;
+        width: 3rem;
+        height: 100%;
+    }
+
+    .mobile-open-menu button {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        cursor: pointer;
+        border: 1px solid #3fa0a7;
+        border-radius: 5px;
+    }
+
+    .mobile-open-menu i {
+        color: #3fa0a7;
+        font-size: 20px;
+    }
+
+    .fixed-nav-sidebar {
+        width: 15rem;
+        transform: translateX(16rem);
+        z-index: 999;
+        top: 8%;
+    }
+
+    .active-fixed-nav-sidebar {
+        transform: translateX(-1rem);
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .container-sales-specifications {
+        width: 85%;
+        height: auto;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sales-specifications-item {
+        width: 100%;
+    }
+
+    .titles-attrbute-item tr {
+        width: 100%;
+        gap: 0.1rem;
+    }
+
+    .contianer-rows-item-issue td {
+        width: 50px;
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .title-sidebar-items-pages {
+        width: 85%;
+    }
+
+    .fixed-nav-sidebar {
+        width: 20vw;
+        height: 25rem;
+        position: fixed;
+        top: 10px;
+        right: 1px;
+    }
+
+    .sidebar-items-pages {
+        width: 80%;
+        height: 2.2rem;
+    }
+
+    .list-item:nth-of-type(2) {
         width: 150px;
+    }
+
+    .justify-sidebar-items-page {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .panel-grid-justify {
+        display: flex;
+        flex-direction: row;
         gap: 1px;
     }
 
-    .add-new-user{
-        width: 150px;
+    .container-sales-specifications {
+        width: 85%;
+        height: auto;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sales-specifications-item {
+        width: 100%;
+    }
+
+    .contianer-rows-item-issue {
+        width: 95%;
+    }
+
+    .container-state-chart {
+        width: 100%;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titles-attrbute-item {
+        width: 95%;
+    }
+
+    .titles-attrbute-item {
+        display: flex;
+    }
+
+    .add-new-modal {
+        width: 100px;
         gap: 1px;
+    }
+
+    .search-item {
+        width: 150px;
+    }
+
+    .container-list-item-about-aside-sales-earlier {
+        width: 100%;
+    }
+
+    .titles-attrbute-item h3 {
+        width: 22px;
+    }
+
+    .contianer-rows-item-issue td {
+        width: 55px;
+        font-size: 9px;
+    }
+
+    /* ==== menu in mobile width ====*/
+    .container-header-list-item {
+        width: 95%;
+    }
+
+    .container-sidebar {
+        display: flex;
+        width: 1vw;
+        height: auto;
+    }
+
+    .mobile-open-menu {
+        display: flex;
+        width: 3rem;
+        height: 100%;
+    }
+
+    .mobile-open-menu button {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        cursor: pointer;
+        border: 1px solid #3fa0a7;
+        border-radius: 5px;
+    }
+
+    .mobile-open-menu i {
+        color: #3fa0a7;
+        font-size: 20px;
+    }
+
+    .fixed-nav-sidebar {
+        width: 15rem;
+        transform: translateX(16rem);
+        z-index: 999;
+        top: 8%;
+    }
+
+    .active-fixed-nav-sidebar {
+        transform: translateX(-1rem);
     }
 }

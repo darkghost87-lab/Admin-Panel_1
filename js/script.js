@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     displayProducts();
     tabsHandle();
     displayModal();
+    handleMobileMenu();
+
     const roleFilter = document.getElementById('filter-role');
     if (roleFilter) {
         roleFilter.addEventListener('change', filterUsers);
@@ -279,5 +281,22 @@ function displayModal() {
                 });
             });
         });
+    });
+}
+
+function handleMobileMenu() {
+    const openBtn = document.querySelectorAll('.open-menu');
+    const sideBar = document.querySelector('.fixed-nav-sidebar');
+    openBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            sideBar.classList.toggle('active-fixed-nav-sidebar');
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        let scroll = window.pageYOffset;
+        if (scroll < 20) {
+            sideBar.classList.remove('active-fixed-nav-sidebar');
+        }
     });
 }

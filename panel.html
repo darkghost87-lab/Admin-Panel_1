@@ -16,6 +16,7 @@
     <section class="container-panel">
         <div class="panel-grid-justify">
             <aside class="container-sidebar">
+
                 <nav class="fixed-nav-sidebar">
                     <div class="sidebar-items-to-page">
                         <div class="title-sidebar-items-pages">
@@ -53,6 +54,11 @@
             <section class="main-page active-main-page" id="dashboard">
                 <header class="header">
                     <ul class="container-header-list-item">
+                        <div class="mobile-open-menu">
+                            <button id="open-menu" class="open-menu">
+                                <i class="bi bi-list"></i>
+                            </button>
+                        </div>
                         <li class="list-item">
                             <h2>داشبورد</h2>
                         </li>
@@ -138,7 +144,7 @@
                         </div>
                     </div>
                     <table class="table">
-                        <thead class="titles-product-info">
+                        <thead class="titles-attrbute-item">
                             <tr>
                                 <th>
                                     <h3>نام محصول</h3>
@@ -160,7 +166,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="container-item-recent-products">
+                        <tbody class="contianer-rows-item-issue container-item-recent-products">
                             <!-- read data form product json with javascript -->
                             <!-- <tr>
                                 <td class="item-product">
@@ -186,6 +192,11 @@
             <section class="main-page" id="users">
                 <header class="header">
                     <ul class="container-header-list-item">
+                        <div class="mobile-open-menu">
+                            <button id="open-menu" class="open-menu">
+                                <i class="bi bi-list"></i>
+                            </button>
+                        </div>
                         <li class="list-item">
                             <h2>کاربران ثبت نامی</h2>
                         </li>
@@ -277,7 +288,7 @@
                         </div>
                     </div>
                     <table class="table">
-                        <thead class="titles-user-info">
+                        <thead class="titles-attrbute-item">
                             <tr>
                                 <th>
                                     <h3>ردیف</h3>
@@ -299,7 +310,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="container-item-users">
+                        <tbody class="contianer-rows-item-issue container-item-users">
                             <!-- must be read data form product json with javascript -->
                             <!-- <tr data-role="${item.roll}>
                                     <td  class="col-id">${item.id}</td>
@@ -336,6 +347,11 @@
             <section class="main-page" id="products">
                 <header class="header">
                     <ul class="container-header-list-item">
+                        <div class="mobile-open-menu">
+                            <button id="open-menu" class="open-menu">
+                                <i class="bi bi-list"></i>
+                            </button>
+                        </div>
                         <li class="list-item">
                             <h2>محصولات</h2>
                         </li>
@@ -431,7 +447,7 @@
                         </div>
                     </div>
                     <table class="table">
-                        <thead class="titles-product-info">
+                        <thead class="titles-attrbute-item">
                             <tr>
                                 <th>
                                     <h3>ردیف</h3>
@@ -456,7 +472,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="container-item-products">
+                        <tbody class="contianer-rows-item-issue container-item-products">
                             <!-- read data form product json with javascript -->
                             <!-- <tr data-role="${item.roll}>
                                 <td  class="col-id">${item.id}</td>
@@ -494,6 +510,11 @@
             <section class="main-page" id="orders">
                 <header class="header">
                     <ul class="container-header-list-item">
+                        <div class="mobile-open-menu">
+                            <button id="open-menu" class="open-menu">
+                                <i class="bi bi-list"></i>
+                            </button>
+                        </div>
                         <li class="list-item">
                             <h2>سفارشات</h2>
                         </li>
@@ -588,7 +609,7 @@
                         </div>
                     </div>
                     <table class="table">
-                        <thead class="titles-orders-info">
+                        <thead class="titles-attrbute-item">
                             <tr>
                                 <th>
                                     <h3>ردیف</h3>
@@ -619,38 +640,8 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="container-item-orders">
+                        <tbody class="contianer-rows-item-issue container-item-orders">
                             <!-- read data form product json with javascript -->
-                            <!-- <tr>
-                                <td class="item-order">
-                                    <div class="row-orders">
-                                        <h4>.</h4>
-                                    </div>
-                                    <div class="code-order">
-                                        <h4>.</h4>
-                                    </div>
-                                    <div class="customer-name-oreder">
-                                        <h4>.</h4>
-                                    </div>
-                                    <div class="date-oreder">
-                                        <h4>.</h4>
-                                    </div>
-                                    <div class="quantity-oreder">
-                                        <h4>.</h4>
-                                    </div>
-                                    <div class="state-oreder">
-                                        <h4>.</h4>
-                                    </div>
-                                    <div class="price-oreder">
-                                        <h4>.</h4>
-                                    </div>
-                                    <div class="dev-edit-btn"><button class="edit-btn">
-                                            <i class="bi bi-pencil-square"></i></button>
-                                    </div>
-                                    <div class="dev-del-btn"><button class="del-btn" id="del-btn"><i
-                                                class="bi bi-x-circle"></i></button></div>
-                                </td>
-                            </tr> -->
                         </tbody>
                     </table>
                 </div>

@@ -15,7 +15,7 @@ li {
 body {
     background: #181818;
     color: white;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 .container-panel {
@@ -161,6 +161,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: clamp(0.7rem , 1vw , 1.5rem);
 }
 
 .list-item i {
